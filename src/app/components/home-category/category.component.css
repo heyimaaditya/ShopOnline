@@ -1,0 +1,77 @@
+.card-body{
+    display:flex;
+    flex-direction:row;
+
+    align-items: center;
+    justify-content:space-evenly;
+    margin: 0px;
+    padding: 10px;
+    width: 100%;
+    max-height: 450px;
+    min-width: 200px;
+
+    background-color: white;
+    z-index: 1;
+    margin-bottom: 15px;
+}
+
+.card{
+    margin-bottom: 15px;
+}
+
+
+
+.card >img {
+    margin-top: 15px;
+    max-height: 300px;
+    max-width: 400px;
+    width: 100%;
+    object-fit: contain;
+    margin-bottom: 15px;
+}
+
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap');
+
+*{
+    font-family: 'Source Sans Pro', sans-serif;
+}
+
+#button{
+    margin-top: 5px;
+    border: none; 
+    font-weight: 500;
+    background-color: #131921;
+    color: white;
+    transition: ease-out 0.3s;
+    font-size: 1rem;
+    outline: none;
+    border-color: 3px solid  darkblue;
+    position: relative;
+    z-index: 1;
+}
+
+#button:hover{
+    color: #fff;
+    cursor: pointer;
+}
+
+#button::before{
+    transition: 0.5s all ease;
+    position: absolute;
+    top: 0;
+    left:50%;
+    right: 50%;
+    bottom: 0;
+    opacity: 0;
+    content: "";
+    background-color:lightseagreen;
+}
+
+#button:hover:before{
+    transition: 0.5s all ease;
+    left: 0;
+    right: 0;
+    opacity: 1;
+    z-index: -1;
+}
+

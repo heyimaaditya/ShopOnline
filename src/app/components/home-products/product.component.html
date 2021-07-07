@@ -1,0 +1,111 @@
+ <!-- <div class="product">
+    <div class="product__info">
+        <p>Think like a Monk</p>
+        <p class="product__price">
+            <small>$</small>
+            <strong>11.99</strong>
+        </p>
+        <div class="product__rating">
+            <p>⭐⭐⭐⭐⭐</p>
+        </div>
+    </div>
+
+    <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdiwanegypt.com%2Fwp-content%2Fuploads%2F2020%2F11%2F9780008386429-1200x1846.jpg&f=1&nofb=1"
+    alt="book">
+
+    <button>Add to Cart</button>
+
+        <p>Think like a Monk</p>
+        <p class="product__price1">
+            <small>$</small>
+            <strong>11.99</strong>
+        </p>
+        <div class="product__rating1">
+            <p>⭐⭐⭐⭐⭐</p>
+        </div>
+    
+    <img src="https://images-na.ssl-images-amazon.com/images/G/01/AmazonExports/Fuji/2019/July/amazonbasics_520x520._SY304_CB442725065_.jpg"
+    alt="">
+    
+    <button>Add to Cart</button>
+</div> 
+  <div class="row row-cols-1 row-cols-md-3 g-4">
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Think Like a Monk - Book</h5>
+                <p class="card-text">
+                    <small>$</small>
+                    <strong>11.99</strong>
+                </p>
+                <div class="product__rating">
+                    <p>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        
+            <img src="https://external-content.duckduckgo.com/iu/?u=https%3A%2F%2Fdiwanegypt.com%2Fwp-content%2Fuploads%2F2020%2F11%2F9780008386429-1200x1846.jpg&f=1&nofb=1"
+            class="card-img-bottom" alt="book">
+        
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body" id="card2">
+                <h5 class="card-title">Boat Bluetooth Earphones</h5>
+                <p class="card-text">
+                    <small>$</small>
+                    <strong>10.00</strong>
+                </p>
+                <div class="product__rating">
+                    <p>⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        
+            <img src="https://rukminim1.flixcart.com/image/416/416/k9stjm80/headphone/e/o/f/rockerz-450-boat-original-imafrgfsan7mpvdf.jpeg?q=70"
+            class="card-img-bottom" alt="Bluetooth Earphones">
+        
+            <button>Add to Cart</button>
+        </div>
+    </div>
+    <div class="col">
+        <div class="card">
+            <div class="card-body">
+                <h5 class="card-title">Wrogn White Sneakers - Men</h5>
+                <p class="card-text">
+                    <small>$</small>
+                    <strong>12.00</strong>
+                </p>
+                <div class="product__rating">
+                    <p>⭐⭐⭐⭐⭐</p>
+                </div>
+            </div>
+        
+            <img src="https://images.pexels.com/photos/1464625/pexels-photo-1464625.jpeg?auto=compress&cs=tinysrgb&dpr=2&h=650&w=940"
+            class="card-img-bottom" alt="White sneakers">
+        
+            <button>Add to Cart</button>
+        </div>
+    </div>
+  </div> 
+    -->
+
+
+
+<div class="container-fluid">
+    <div class="row">
+        <ng-container *ngFor="let item of productList">
+            <div class="card col-md-3">
+                <img src="{{item.image}}" alt="">
+                <h5 style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.title}}</h5>
+                <p style="white-space: nowrap;overflow: hidden;text-overflow: ellipsis;max-width: 100ch;">{{item.description}}</p>
+                <p><strong>$</strong>{{item.price}}</p>
+                <button class="btn" (click)=addtocart(item)>Add to cart</button>
+            </div>
+        </ng-container>
+    </div>
+</div>
+
+  
+
+
