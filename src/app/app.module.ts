@@ -9,7 +9,6 @@ import { AngularFireModule } from '@angular/fire';
 import { AngularFireAuthModule } from '@angular/fire/auth';
 import { environment } from 'src/environments/environment';
 import { ProductComponent } from './components/home-products/product.component';
-import { CategoryComponent } from './components/home-category/category.component';
 import { CheckOutComponent } from './components/checkOut/check-out.component';
 import { HttpClientModule } from '@angular/common/http';
 
@@ -19,7 +18,6 @@ import { HttpClientModule } from '@angular/common/http';
     HomeComponent,
     SignInComponent,
     ProductComponent,
-    CategoryComponent,
     CheckOutComponent,
       
   ],

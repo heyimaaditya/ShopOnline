@@ -7,7 +7,7 @@ import { BehaviorSubject } from 'rxjs';
 
 export class CartService {
 
-  public cartItemList :any[] 
+  public cartItemList :any = [] 
   public productList = new BehaviorSubject<any>([]);
   
 
@@ -34,11 +34,12 @@ export class CartService {
   }
 
 
-  getTotalPrice(){
+  getTotalPrice() : number{
     let grandTotal = 0;
     this.cartItemList.map((a:any)=>{
       grandTotal+=a.total;
     })
+    return grandTotal;
   }
 
 
@@ -48,6 +49,7 @@ export class CartService {
         this.cartItemList.splice(index,1);
       }
     })
+    this.productList.next(this.cartItemList);
   }
 
   removeAllCart(){

@@ -19,7 +19,8 @@ export class AuthService {
   authLoginPopUpProvider(provider : any){
     return this.fAuth.signInWithPopup(provider)
                       .then(response => {
-                        console.log('Successfully Logged In!: ',response);
+                        console.log('Successfully Logged In!: ',response.additionalUserInfo?.profile);
+                        localStorage.setItem('user',JSON.stringify(response.additionalUserInfo?.profile));
                         this.router.navigate(['/sign-in']);
                       })
                       .catch(error => {

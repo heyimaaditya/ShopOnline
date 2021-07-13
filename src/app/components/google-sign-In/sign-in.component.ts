@@ -9,6 +9,7 @@ import { CartService } from 'src/app/services/cart.service';
 })
 export class SignInComponent implements OnInit {
 
+  public user : any = {};
   public totalItem : number = 0 ;
   constructor(private authService: AuthService,private cartService:CartService) { }
 
@@ -17,11 +18,13 @@ export class SignInComponent implements OnInit {
       .subscribe(res=>{
           this.totalItem = res.length;
       })
-  }
 
+    this.user = JSON.parse(localStorage.getItem('user') || '{}');
+
+  }
+  
   signInWithGoogle(){
     this.authService.loginViaGoogle();
   }
-
 
 }
